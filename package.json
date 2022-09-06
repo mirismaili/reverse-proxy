@@ -1,0 +1,32 @@
+{
+  "name": "reverse-proxy",
+  "version": "0.0.0",
+  "description": "A simple reverse proxy by node.js",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mirismaili/reverse-proxy"
+  },
+  "license": "MIT",
+  "author": "S. Mahdi Mir-Ismaili <s.m.mirismaili@gmail.com>",
+  "type": "module",
+  "main": "src/main.js",
+  "exports": {
+    "./*": "./src/*"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "patch-version": "npm version patch --no-git-tag-version",
+    "increase-minor-version": "npm version minor --no-git-tag-version",
+    "increase-major-version": "npm version major --no-git-tag-version",
+    "tag-this-version": "node -e \"require('child_process').execSync('git tag v' + require('./package.json').version)\""
+  },
+  "dependencies": {
+    "anstyle": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
